@@ -1,17 +1,24 @@
-🛰️ POAD: Open-World Panoptic Anomaly Detection via Visual-Language Alignment
-POAD is a dual-branch multimodal framework for anomaly detection in open-world urban driving environments. By synergistically integrating vision-language alignment and text-conditioned object grounding, POAD achieves robust detection of unknown and unconventional anomalies—from scattered cargo to unexpected animals.
+# 🚀 POAD: Open-World Panoptic Anomaly Detection via Visual-Language Alignment
 
-🧠 Framework Highlights
+POAD is a **dual-branch multimodal framework** for anomaly detection in open-world urban driving environments. By synergistically integrating **vision-language alignment** and **text-conditioned object grounding**, POAD achieves robust detection of **unknown and unconventional anomalies**—from scattered cargo to unexpected animals.
+
+---
+
+## 🧠 Framework Highlights
+
 POAD features two complementary branches that collaborate to detect and classify anomalies beyond the closed-world object set:
 
-🔍 FC-CLIP Branch
-A feature-consistent CLIP-based module for vision-language alignment, supporting image-text retrieval, open-vocabulary classification, and zero-shot reasoning.
+* 🔍 **`FC-CLIP` Branch**
+  A feature-consistent CLIP-based module for vision-language alignment, supporting image-text retrieval, open-vocabulary classification, and zero-shot reasoning.
 
-🧭 GroundingDINO (GS) Branch
-A powerful open-set object detector capable of grounding arbitrary text prompts in real-world images, enabling flexible detection of rare and unknown categories.
+* 🤭 **`GroundingDINO` (GS) Branch**
+  A powerful open-set object detector capable of grounding arbitrary text prompts in real-world images, enabling flexible detection of rare and unknown categories.
 
-🖼️ Conceptual Architecture
-mathematica
+---
+
+## 🖼️ Conceptual Architecture
+
+```
 [Image Input]
      │
      ├──▶ FC-CLIP Branch ──▶ Vision-Language Feature Embedding
@@ -21,3 +28,104 @@ mathematica
      └──▶ GroundingDINO Branch ──▶ Text-Conditioned Object Detection
                                │
                                └──▶ Open-Set Spatial Anomaly Localization
+```
+
+---
+
+## 🚀 Quick Start
+
+### 1️⃣ Environment Setup
+
+```bash
+# Create Python environment (recommended Python 3.8+)
+conda create -n POAD python=3.8 -y
+conda activate POAD
+
+# Clone the repository
+git clone https://github.com/fugit0316/POAD.git
+cd POAD
+```
+
+> ⚠️ Each branch has separate dependencies and setup routines.
+
+---
+
+### 2️⃣ FC-CLIP Branch Setup
+
+```bash
+cd FC-CLIP
+pip install -r requirements.txt
+```
+
+**🔧 Capabilities**:
+
+* CLIP-based vision-language embedding
+* Zero-shot image classification
+* Open-vocabulary similarity matching
+
+📄 *More details*: [`FC-CLIP/README.md`](./FC-CLIP/README.md)
+
+---
+
+### 3️⃣ GroundingDINO (GS) Branch Setup
+
+```bash
+cd GroundingDINO
+pip install -r requirements.txt
+```
+
+**🔧 Capabilities**:
+
+* Object detection guided by natural language prompts
+* Support for unseen categories via open-vocabulary grounding
+* Robust localization in urban scenarios
+
+📄 *More details*: [`GroundingDINO/README.md`](./GroundingDINO/README.md)
+
+---
+
+### 4️⃣ (Optional) Segment Anything Module (SAM)
+
+> POAD optionally supports [Segment Anything Model (SAM)](https://github.com/facebookresearch/segment-anything) for pixel-level anomaly refinement.
+
+**Environment Requirements**:
+
+* `python >= 3.8`
+* `pytorch >= 1.7`
+* `torchvision >= 0.8`
+
+> ✅ Installing PyTorch and TorchVision with **CUDA support** is strongly recommended. Refer to the [official installation guide](https://pytorch.org/get-started/locally/).
+
+**Install SAM via pip**:
+
+```bash
+pip install git+https://github.com/facebookresearch/segment-anything.git
+```
+
+**Or clone and install locally**:
+
+```bash
+git clone https://github.com/facebookresearch/segment-anything.git
+cd segment-anything
+pip install -e .
+```
+
+**Optional but Recommended Dependencies** (for COCO-format mask saving, ONNX export, and example notebooks):
+
+```bash
+pip install opencv-python pycocotools matplotlib onnxruntime onnx jupyter
+```
+
+---
+
+## 📌 Applications
+
+* 🚗 Urban anomaly detection for autonomous driving
+* 🧠 Open-world perception with language-guided understanding
+* 📦 Safety monitoring for unexpected roadside hazards
+
+---
+
+## 💼 Citation
+
+*Coming soon.*
