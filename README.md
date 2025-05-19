@@ -87,26 +87,11 @@ pip install -r requirements.txt
 
 ### 4️⃣ (Optional) Segment Anything Module (SAM)
 
-> POAD optionally supports [Segment Anything Model (SAM)](https://github.com/facebookresearch/segment-anything) for pixel-level anomaly refinement.
+> DBAS optionally supports [Segment Anything Model (SAM)](https://github.com/facebookresearch/segment-anything) for pixel-level anomaly refinement.
 
 **Environment Requirements**:
 
-* `python >= 3.8`
-* `pytorch >= 1.7`
-* `torchvision >= 0.8`
-
-> ✅ Installing PyTorch and TorchVision with **CUDA support** is strongly recommended. Refer to the [official installation guide](https://pytorch.org/get-started/locally/).
-
-**Install SAM via pip**:
-
 ```bash
-pip install git+https://github.com/facebookresearch/segment-anything.git
-```
-
-**Or clone and install locally**:
-
-```bash
-git clone https://github.com/facebookresearch/segment-anything.git
 cd segment-anything
 pip install -e .
 ```
