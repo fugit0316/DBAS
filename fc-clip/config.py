@@ -1,0 +1,1 @@
+_C.MODEL.KNOWN_CLASSES = ["dog", "cat", "car"]  # 已知类别列表 
