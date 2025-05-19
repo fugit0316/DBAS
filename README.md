@@ -84,10 +84,6 @@ pip install -e .
 
 **Optional but Recommended Dependencies** (for COCO-format mask saving, ONNX export, and example notebooks):
 
-```bash
-pip install opencv-python pycocotools matplotlib onnxruntime onnx jupyter
-```
-
 ---
 
 ## 📌 Applications
