@@ -71,7 +71,7 @@ pip install -r requirements.txt
 
 ---
 
-### 4️⃣ (Optional) Segment Anything Module (SAM)
+### 4️⃣ Segment Anything Module (SAM)
 
 > DBAS optionally supports [Segment Anything Model (SAM)](https://github.com/facebookresearch/segment-anything) for pixel-level anomaly refinement.
 
